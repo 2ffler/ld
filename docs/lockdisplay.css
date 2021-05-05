@@ -42,6 +42,8 @@ h1{
 
 h2{
 	text-align: center;
+	height: 2em;
+	line-height: 2em;
 	margin: 15px 0 1ex;
 	padding: 2px auto 7px;
 	border-left: solid 0.8ex #aaaaaa;
@@ -54,6 +56,8 @@ h2{
 
 h3{
 	text-align: center;
+	height: 2em;
+	line-height: 2em;
 	margin: 15px 25px 1ex 0;
 	padding: 2px auto 7px;
 	border-left: solid 0.8ex #aaaaaa;
@@ -139,7 +143,7 @@ select{
 	padding: 0 3px;
 	height: 2.7em;
 	box-shadow: none;
-	background-color: #ffffff;
+	background-color: #eee;
 	border: solid 1px #000;
 }
 
@@ -275,7 +279,7 @@ form{
 	display: inline-block;
 	padding: 10px;
 	margin: 0;
-	max-width: 23.5em;
+	width: 23.5em;
 	height: 33em;
 	overflow: scroll;
 	border: solid 1px #000000;
@@ -291,7 +295,7 @@ form{
 	width: 1em;
 }
 .new{
-	margin: 0 0 27.5em;
+	margin: 0 0 26.5em;
 	padding: 0;
 }
 
