@@ -24,7 +24,7 @@ if(window.File) {
 		// ファイル読み取りに成功したとき
 		reader.onload = function() {
 			const insert = '※推奨画像比率・縦長９：16<h4>背景画像プレビュー↓</h4><div class="frame"><img src="' + reader.result + '" class="backPreview"></div>';
-			const buttonSet ='<button type="submit" name="fileCreate" onclick="buttonClick(this)">確認</button>';
+			const buttonSet ='<button type="button" name="fileCreate" onclick="buttonClick(this)">確認</button>';
 			backPreview.innerHTML = insert;
 			buttonThere.innerHTML = buttonSet;
 		}
