@@ -382,7 +382,7 @@ function buttonClick(){
 
 		var createbutton = document.getElementById('result');
 
-		createbutton.innerHTML = '<h4>※最終確認</h4>・ロック画面背景画像は誰かの著作権侵害してない？<br>・ロック画面表示時間、日付、画面背景は今のもので問題ない？<br>・通知が不在着信かメッセージか、選択した？<br>・送信者の名前は入力済？<br>・通知時間は入力した？<br>・入力した通知時間は時間ごっちゃになってない？<br>・メッセージの通知に本文は入力した？<h4>全部おっけーだったら↓のボタンを押して。</h4><button type="submit" name="letsCreate" onclick="gotcha(this)">作成！</button>';
+		createbutton.innerHTML = '<h4>※最終確認</h4>・ロック画面背景画像は誰かの著作権侵害してない？<br>・ロック画面表示時間、日付、画面背景は今のもので問題ない？<br>・通知が不在着信かメッセージか、選択した？<br>・送信者の名前は入力済？<br>・通知時間は入力した？<br>・入力した通知時間は時間ごっちゃになってない？<br>・メッセージの通知に本文は入力した？<h4>全部おっけーだったら↓のボタンを押して。</h4><button type="button" name="letsCreate" onclick="gotcha(this)">作成！</button>';
 	};
 	icon.src = "image/liersmall.png";
 			};
