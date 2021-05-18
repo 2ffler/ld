@@ -35,6 +35,6 @@ function timeRandom(){
 	};
 	if(timeRandomM < 10){
 		timeRandomM = '0' + `${timeRandomM}`;
-	}
+	};
 	document.querySelector(`input[name='time']`).value = timeRandomH + ':' + timeRandomM;
 };
