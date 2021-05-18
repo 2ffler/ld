@@ -30,11 +30,13 @@ function changeItem(obj){
 function timeRandom(){
 	var timeRandomH = Math.floor(Math.random() * 7 + 18);
 	var timeRandomM = Math.floor(Math.random() * 60);
+	
 	if(timeRandomH == 24){
 		timeRandomH = '00';
 	};
 	if(timeRandomM < 10){
 		timeRandomM = '0' + `${timeRandomM}`;
 	};
+	
 	document.querySelector(`input[name='time']`).value = timeRandomH + ':' + timeRandomM;
 };

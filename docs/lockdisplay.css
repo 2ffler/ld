@@ -193,14 +193,17 @@ input[type=text]{
 	border-radius: 3px;
 }
 
-button[name=fileCreate]{
-	font-family: "M PLUS 1p", sans-serif;
-	display: block;
+button{
 	height: 40px;
 	width: 200px;
+	display: block;
 	cursor: pointer;
 	margin: 10px auto;
 	padding: 0;
+}
+
+button[name=fileCreate]{
+	font-family: "M PLUS 1p", sans-serif;
 	color: #fff;
 	text-shadow: none;
 	box-shadow: none;
@@ -212,12 +215,6 @@ button[name=fileCreate]{
 
 button#randomm{
 	font-family: "M PLUS 1p", sans-serif;
-	display: block;
-	height: 40px;
-	width: 200px;
-	cursor: pointer;
-	margin: 10px auto;
-	padding: 0;
 	color: #fff;
 	text-shadow: none;
 	box-shadow: none;
@@ -229,12 +226,6 @@ button#randomm{
 
 button[name=letsCreate]{
 	font-family: "M PLUS 1p", sans-serif;
-	display: block;
-	height: 40px;
-	width: 200px;
-	cursor: pointer;
-	margin: 10px auto;
-	padding: 0;
 	color: #223a70;
 	text-shadow: none;
 	box-shadow: none;
