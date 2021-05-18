@@ -1,4 +1,3 @@
-var MyBG;
 if(window.File) {
 	var backPreview = document.getElementById('backPreview');
 	var select = document.querySelector('input[name="display_back"]');
