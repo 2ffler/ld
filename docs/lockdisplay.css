@@ -210,6 +210,23 @@ button[name=fileCreate]{
 	border-radius: 1ex;
 }
 
+button#randomm{
+	font-family: "M PLUS 1p", sans-serif;
+	display: block;
+	height: 40px;
+	width: 200px;
+	cursor: pointer;
+	margin: 10px auto;
+	padding: 0;
+	color: #fff;
+	text-shadow: none;
+	box-shadow: none;
+	background: #223a70;
+	border: none;
+	-webkit-appearance: none;
+	border-radius: 1ex;
+}
+
 button[name=letsCreate]{
 	font-family: "M PLUS 1p", sans-serif;
 	display: block;
