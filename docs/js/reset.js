@@ -27,5 +27,9 @@ function resetWhat(){
 };
 
 function resetButton(obj){
-	console.log(obj.checked);
+	if (obj.value == true){
+		document.getElementById('reset').style = "display: block;";
+	} else {
+		document.getElementById('reset').style = "display: none;";
+	};
 };
