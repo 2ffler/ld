@@ -158,7 +158,6 @@ input[type]{
 	padding: 0.2em;
 	background-color: #eee;
 	border: solid 0.06em #000;
-	-webkit-appearance: none;
 	border-radius: 0.35em;
 }
 input[type=text]{
@@ -264,17 +263,8 @@ form{
 input[type=checkbox]{
 	width: 2em;
 	height: 2em;
-	background-color: #fff;
 	border-radius: 0;
-	margin: 0.5em;
-	vertical-align: middle;
-}
-
-input[type=checkbox]:checked{
-	width: 2em;
-	height: 2em;
-	border-radius: 0;
-	margin: 0.5em;
+	margin: 0.5em 0.2em;
 	vertical-align: middle;
 }
 
