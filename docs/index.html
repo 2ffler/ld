@@ -5,6 +5,7 @@
 	<meta name="robots" content="noindex,nofollow,noarchive,noimageindex">
 	<title>zzzzzzz.......</title>
 	<meta name="author" content="2ffler">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="lockdisplay.css">
 </head>
 <body>
@@ -16,433 +17,433 @@
 	<div id="wrap">
 		<h1>ロック画面モドキ</h1>
 		<div id="back">
-			<h2>ロック画面表示時間</h2>
-			<input type="date" name="date" value="2017-12-24">
-			<input type="time" name="time" value="21:34">
-			<button type="button" onclick="timeRandom()">ランダム時間設定</button>
-			<h2>ロック画面背景画像</h2>
-			<input type="file" name="display_back" accept="image/*">
-			<div id="backPreview">
-				※推奨画像比率・縦長９：16<br>
-				※短辺を基準に自動サイズ変更<br>
-				※中央寄せ、余分は自動トリミング
+			<div class="left">
+				<h2>ロック画面表示時間</h2>
+				<div class="center">
+					<input type="date" name="date" value="2017-12-24">
+					<input type="time" name="time" value="21:34">
+					<button type="button" onclick="timeRandom()">ランダム時間設定</button>
+				</div>
+				<h2>ロック画面背景画像</h2>
+				<input type="file" name="display_back" accept="image/*">
+				<div id="backPreview">
+					※推奨画像比率・縦長９：16<br>
+					※短辺を基準に自動サイズ変更<br>
+					※中央寄せ、余分は自動トリミング
+				</div>
+				<script type="text/javascript" src="js/previewCreate.js"></script>
 			</div>
-			<script type="text/javascript" src="js/previewCreate.js"></script>
-			<h2>通知内容入力欄</h2>
-			<div id="inputarea">
-				<div class="notice">
-					<input type="checkbox" name="RRR" id="RRR" onclick="resetButton(this)">
-					<label for="RRR">リセットボタン表示</label>
-					<div id="reset" style="display: none;">
-						<button type="button" name="rT" id="rT" onclick="resetTime(this)">通知時間取消</button>
-						<button type="button" name="rW" id="rW" onclick="resetWhat(this)">通知種類取消</button>
-						<button type="button" name="rM" id="rM" onclick="resetMessage(this)">メッセ内容取消</button>
-						<button type="button" name="rS" id="rS" onclick="resetSender(this)">送信者取消</button>
+			<div class="left">
+				<h2>通知内容入力欄</h2>
+				<div id="inputarea">
+					<div class="notice">
+						<input type="checkbox" name="RRR" id="RRR" onclick="resetButton(this)">
+						<label for="RRR">リセットボタン表示</label>
+						<div id="reset" style="display: none;">
+							<button type="button" name="rT" id="rT" onclick="resetTime(this)">通知時間取消</button>
+							<button type="button" name="rW" id="rW" onclick="resetWhat(this)">通知種類取消</button>
+							<button type="button" name="rM" id="rM" onclick="resetMessage(this)">メッセ内容取消</button>
+							<button type="button" name="rS" id="rS" onclick="resetSender(this)">送信者取消</button>
+						</div>
+						<h4>通知１</h4>
+						<select name="time1" onchange="changeTime(this)">
+							<option value="0" hidden>いつ届いた？</option>
+							<optgroup label="今">
+								<option value="今">今</option>
+							</optgroup>
+							<optgroup label="数分前">
+								<option value="1分前">1分前</option>
+								<option value="2分前">2分前</option>
+								<option value="3分前">3分前</option>
+								<option value="4分前">4分前</option>
+								<option value="5分前">5分前</option>
+								<option value="8分前">8分前</option>
+							</optgroup>
+							<optgroup label="十数分前">
+								<option value="10分前">10分前</option>
+								<option value="12分前">12分前</option>
+								<option value="13分前">13分前</option>
+								<option value="15分前">15分前</option>
+								<option value="16分前">16分前</option>
+								<option value="19分前">19分前</option>
+							</optgroup>
+							<optgroup label="数十分前">
+								<option value="20分前">20分前</option>
+								<option value="27分前">27分前</option>
+								<option value="30分前">30分前</option>
+								<option value="31分前">31分前</option>
+								<option value="40分前">40分前</option>
+								<option value="48分前">48分前</option>
+								<option value="54分前">54分前</option>
+							</optgroup>
+							<optgroup label="数時間前">
+								<option value="1時間前">1時間前</option>
+								<option value="2時間前">2時間前</option>
+								<option value="3時間前">3時間前</option>
+								<option value="5時間前">5時間前</option>
+								<option value="6時間前">6時間前</option>
+								<option value="8時間前">8時間前</option>
+								<option value="11時間前">11時間前</option>
+								<option value="14時間前">14時間前</option>
+								<option value="18時間前">18時間前</option>
+								<option value="23時間前">23時間前</option>
+							</optgroup>
+							<optgroup label="数日前">
+								<option value="1日前">1日前</option>
+								<option value="2日前">2日前</option>
+								<option value="3日前">3日前</option>
+								<option value="4日前">4日前</option>
+								<option value="5日前">5日前</option>
+								<option value="6日前">6日前</option>
+							</optgroup>
+							<optgroup label="もっと前">
+								<option value="1週間前">1週間前</option>
+								<option value="3週間前">3週間前</option>
+							</optgroup>
+						</select>
+						<select name="type1" onchange="changeItem(this)">
+							<option value="0" hidden>なにで届いた？</option>
+							<option value="1">メッセージ</option>
+							<option value="2">不在着信</option>
+							<option value="0">なんも届いとらん</option>
+						</select>
+						<input type="text" name="sender1" class="sender" placeholder="誰から届いた？">
+						<textarea placeholder="メッセージ内容ここ。「なにで届いた？」を「メッセージ」にすると入力可能。長いと自動で省略されて「タップしてさらに表示」とか出てくる。" class="messagearea" name="message1" disabled></textarea>
+						<h4>通知２</h4>
+						<select name="time2" onchange="changeTime(this)">
+							<option value="0" hidden>いつ届いた？</option>
+							<optgroup label="今">
+								<option value="今">今</option>
+							</optgroup>
+							<optgroup label="数分前">
+								<option value="1分前">1分前</option>
+								<option value="2分前">2分前</option>
+								<option value="3分前">3分前</option>
+								<option value="4分前">4分前</option>
+								<option value="5分前">5分前</option>
+								<option value="8分前">8分前</option>
+							</optgroup>
+							<optgroup label="十数分前">
+								<option value="10分前">10分前</option>
+								<option value="12分前">12分前</option>
+								<option value="13分前">13分前</option>
+								<option value="15分前">15分前</option>
+								<option value="16分前">16分前</option>
+								<option value="19分前">19分前</option>
+							</optgroup>
+							<optgroup label="数十分前">
+								<option value="20分前">20分前</option>
+								<option value="27分前">27分前</option>
+								<option value="30分前">30分前</option>
+								<option value="31分前">31分前</option>
+								<option value="40分前">40分前</option>
+								<option value="48分前">48分前</option>
+								<option value="54分前">54分前</option>
+							</optgroup>
+							<optgroup label="数時間前">
+								<option value="1時間前">1時間前</option>
+								<option value="2時間前">2時間前</option>
+								<option value="3時間前">3時間前</option>
+								<option value="5時間前">5時間前</option>
+								<option value="6時間前">6時間前</option>
+								<option value="8時間前">8時間前</option>
+								<option value="11時間前">11時間前</option>
+								<option value="14時間前">14時間前</option>
+								<option value="18時間前">18時間前</option>
+								<option value="23時間前">23時間前</option>
+							</optgroup>
+							<optgroup label="数日前">
+								<option value="1日前">1日前</option>
+								<option value="2日前">2日前</option>
+								<option value="3日前">3日前</option>
+								<option value="4日前">4日前</option>
+								<option value="5日前">5日前</option>
+								<option value="6日前">6日前</option>
+							</optgroup>
+							<optgroup label="もっと前">
+								<option value="1週間前">1週間前</option>
+								<option value="3週間前">3週間前</option>
+							</optgroup>
+						</select>
+						<select name="type2" onchange="changeItem(this)">
+							<option value="0" hidden>なにで届いた？</option>
+							<option value="1">メッセージ</option>
+							<option value="2">不在着信</option>
+							<option value="0">なんも届いとらん</option>
+						</select>
+						<input type="text" name="sender2" class="sender" placeholder="誰から届いた？">
+						<textarea placeholder="メッセージ内容ここ。「なにで届いた？」を「メッセージ」にすると入力可能。長いと自動で省略されて「タップしてさらに表示」とか出てくる。" class="messagearea" name="message2" disabled></textarea>
+						<h4>通知３</h4>
+						<select name="time3" onchange="changeTime(this)">
+							<option value="0" hidden>いつ届いた？</option>
+							<optgroup label="今">
+								<option value="今">今</option>
+							</optgroup>
+							<optgroup label="数分前">
+								<option value="1分前">1分前</option>
+								<option value="2分前">2分前</option>
+								<option value="3分前">3分前</option>
+								<option value="4分前">4分前</option>
+								<option value="5分前">5分前</option>
+								<option value="8分前">8分前</option>
+							</optgroup>
+							<optgroup label="十数分前">
+								<option value="10分前">10分前</option>
+								<option value="12分前">12分前</option>
+								<option value="13分前">13分前</option>
+								<option value="15分前">15分前</option>
+								<option value="16分前">16分前</option>
+								<option value="19分前">19分前</option>
+							</optgroup>
+							<optgroup label="数十分前">
+								<option value="20分前">20分前</option>
+								<option value="27分前">27分前</option>
+								<option value="30分前">30分前</option>
+								<option value="31分前">31分前</option>
+								<option value="40分前">40分前</option>
+								<option value="48分前">48分前</option>
+								<option value="54分前">54分前</option>
+							</optgroup>
+							<optgroup label="数時間前">
+								<option value="1時間前">1時間前</option>
+								<option value="2時間前">2時間前</option>
+								<option value="3時間前">3時間前</option>
+								<option value="5時間前">5時間前</option>
+								<option value="6時間前">6時間前</option>
+								<option value="8時間前">8時間前</option>
+								<option value="11時間前">11時間前</option>
+								<option value="14時間前">14時間前</option>
+								<option value="18時間前">18時間前</option>
+								<option value="23時間前">23時間前</option>
+							</optgroup>
+							<optgroup label="数日前">
+								<option value="1日前">1日前</option>
+								<option value="2日前">2日前</option>
+								<option value="3日前">3日前</option>
+								<option value="4日前">4日前</option>
+								<option value="5日前">5日前</option>
+								<option value="6日前">6日前</option>
+							</optgroup>
+							<optgroup label="もっと前">
+								<option value="1週間前">1週間前</option>
+								<option value="3週間前">3週間前</option>
+							</optgroup>
+						</select>
+						<select name="type3" onchange="changeItem(this)">
+							<option value="0" hidden>なにで届いた？</option>
+							<option value="1">メッセージ</option>
+							<option value="2">不在着信</option>
+							<option value="0">なんも届いとらん</option>
+						</select>
+						<input type="text" name="sender3" class="sender" placeholder="誰から届いた？">
+						<textarea placeholder="メッセージ内容ここ。「なにで届いた？」を「メッセージ」にすると入力可能。長いと自動で省略されて「タップしてさらに表示」とか出てくる。" class="messagearea" name="message3" disabled></textarea>
+						<h4>通知４</h4>
+						<select name="time4" onchange="changeTime(this)">
+							<option value="0" hidden>いつ届いた？</option>
+							<optgroup label="今">
+								<option value="今">今</option>
+							</optgroup>
+							<optgroup label="数分前">
+								<option value="1分前">1分前</option>
+								<option value="2分前">2分前</option>
+								<option value="3分前">3分前</option>
+								<option value="4分前">4分前</option>
+								<option value="5分前">5分前</option>
+								<option value="8分前">8分前</option>
+							</optgroup>
+							<optgroup label="十数分前">
+								<option value="10分前">10分前</option>
+								<option value="12分前">12分前</option>
+								<option value="13分前">13分前</option>
+								<option value="15分前">15分前</option>
+								<option value="16分前">16分前</option>
+								<option value="19分前">19分前</option>
+							</optgroup>
+							<optgroup label="数十分前">
+								<option value="20分前">20分前</option>
+								<option value="27分前">27分前</option>
+								<option value="30分前">30分前</option>
+								<option value="31分前">31分前</option>
+								<option value="40分前">40分前</option>
+								<option value="48分前">48分前</option>
+								<option value="54分前">54分前</option>
+							</optgroup>
+							<optgroup label="数時間前">
+								<option value="1時間前">1時間前</option>
+								<option value="2時間前">2時間前</option>
+								<option value="3時間前">3時間前</option>
+								<option value="5時間前">5時間前</option>
+								<option value="6時間前">6時間前</option>
+								<option value="8時間前">8時間前</option>
+								<option value="11時間前">11時間前</option>
+								<option value="14時間前">14時間前</option>
+								<option value="18時間前">18時間前</option>
+								<option value="23時間前">23時間前</option>
+							</optgroup>
+							<optgroup label="数日前">
+								<option value="1日前">1日前</option>
+								<option value="2日前">2日前</option>
+								<option value="3日前">3日前</option>
+								<option value="4日前">4日前</option>
+								<option value="5日前">5日前</option>
+								<option value="6日前">6日前</option>
+							</optgroup>
+							<optgroup label="もっと前">
+								<option value="1週間前">1週間前</option>
+								<option value="3週間前">3週間前</option>
+							</optgroup>
+						</select>
+						<select name="type4" onchange="changeItem(this)">
+							<option value="0" hidden>なにで届いた？</option>
+							<option value="1">メッセージ</option>
+							<option value="2">不在着信</option>
+							<option value="0">なんも届いとらん</option>
+						</select>
+						<input type="text" name="sender4" class="sender" placeholder="誰から届いた？">
+						<textarea placeholder="メッセージ内容ここ。「なにで届いた？」を「メッセージ」にすると入力可能。長いと自動で省略されて「タップしてさらに表示」とか出てくる。" class="messagearea" name="message4" disabled></textarea>
+						<h4>通知５</h4>
+						<select name="time5" onchange="changeTime(this)">
+							<option value="0" hidden>いつ届いた？</option>
+							<optgroup label="今">
+								<option value="今">今</option>
+							</optgroup>
+							<optgroup label="数分前">
+								<option value="1分前">1分前</option>
+								<option value="2分前">2分前</option>
+								<option value="3分前">3分前</option>
+								<option value="4分前">4分前</option>
+								<option value="5分前">5分前</option>
+								<option value="8分前">8分前</option>
+							</optgroup>
+							<optgroup label="十数分前">
+								<option value="10分前">10分前</option>
+								<option value="12分前">12分前</option>
+								<option value="13分前">13分前</option>
+								<option value="15分前">15分前</option>
+								<option value="16分前">16分前</option>
+								<option value="19分前">19分前</option>
+							</optgroup>
+							<optgroup label="数十分前">
+								<option value="20分前">20分前</option>
+								<option value="27分前">27分前</option>
+								<option value="30分前">30分前</option>
+								<option value="31分前">31分前</option>
+								<option value="40分前">40分前</option>
+								<option value="48分前">48分前</option>
+								<option value="54分前">54分前</option>
+							</optgroup>
+							<optgroup label="数時間前">
+								<option value="1時間前">1時間前</option>
+								<option value="2時間前">2時間前</option>
+								<option value="3時間前">3時間前</option>
+								<option value="5時間前">5時間前</option>
+								<option value="6時間前">6時間前</option>
+								<option value="8時間前">8時間前</option>
+								<option value="11時間前">11時間前</option>
+								<option value="14時間前">14時間前</option>
+								<option value="18時間前">18時間前</option>
+								<option value="23時間前">23時間前</option>
+							</optgroup>
+							<optgroup label="数日前">
+								<option value="1日前">1日前</option>
+								<option value="2日前">2日前</option>
+								<option value="3日前">3日前</option>
+								<option value="4日前">4日前</option>
+								<option value="5日前">5日前</option>
+								<option value="6日前">6日前</option>
+							</optgroup>
+							<optgroup label="もっと前">
+								<option value="1週間前">1週間前</option>
+								<option value="3週間前">3週間前</option>
+							</optgroup>
+						</select>
+						<select name="type5" onchange="changeItem(this)">
+							<option value="0" hidden>なにで届いた？</option>
+							<option value="1">メッセージ</option>
+							<option value="2">不在着信</option>
+							<option value="0">なんも届いとらん</option>
+						</select>
+						<input type="text" name="sender5" class="sender" placeholder="誰から届いた？">
+						<textarea placeholder="メッセージ内容ここ。「なにで届いた？」を「メッセージ」にすると入力可能。長いと自動で省略されて「タップしてさらに表示」とか出てくる。" class="messagearea" name="message5" disabled></textarea>
+						<h4>通知６</h4>
+						<select name="time6" onchange="changeTime(this)">
+							<option value="0" hidden>いつ届いた？</option>
+							<optgroup label="今">
+								<option value="今">今</option>
+							</optgroup>
+							<optgroup label="数分前">
+								<option value="1分前">1分前</option>
+								<option value="2分前">2分前</option>
+								<option value="3分前">3分前</option>
+								<option value="4分前">4分前</option>
+								<option value="5分前">5分前</option>
+								<option value="8分前">8分前</option>
+							</optgroup>
+							<optgroup label="十数分前">
+								<option value="10分前">10分前</option>
+								<option value="12分前">12分前</option>
+								<option value="13分前">13分前</option>
+								<option value="15分前">15分前</option>
+								<option value="16分前">16分前</option>
+								<option value="19分前">19分前</option>
+							</optgroup>
+							<optgroup label="数十分前">
+								<option value="20分前">20分前</option>
+								<option value="27分前">27分前</option>
+								<option value="30分前">30分前</option>
+								<option value="31分前">31分前</option>
+								<option value="40分前">40分前</option>
+								<option value="48分前">48分前</option>
+								<option value="54分前">54分前</option>
+							</optgroup>
+							<optgroup label="数時間前">
+								<option value="1時間前">1時間前</option>
+								<option value="2時間前">2時間前</option>
+								<option value="3時間前">3時間前</option>
+								<option value="5時間前">5時間前</option>
+								<option value="6時間前">6時間前</option>
+								<option value="8時間前">8時間前</option>
+								<option value="11時間前">11時間前</option>
+								<option value="14時間前">14時間前</option>
+								<option value="18時間前">18時間前</option>
+								<option value="23時間前">23時間前</option>
+							</optgroup>
+							<optgroup label="数日前">
+								<option value="1日前">1日前</option>
+								<option value="2日前">2日前</option>
+								<option value="3日前">3日前</option>
+								<option value="4日前">4日前</option>
+								<option value="5日前">5日前</option>
+								<option value="6日前">6日前</option>
+							</optgroup>
+							<optgroup label="もっと前">
+								<option value="1週間前">1週間前</option>
+								<option value="3週間前">3週間前</option>
+							</optgroup>
+						</select>
+						<select name="type6" onchange="changeItem(this)">
+							<option value="0" hidden>なにで届いた？</option>
+							<option value="1">メッセージ</option>
+							<option value="2">不在着信</option>
+							<option value="0">なんも届いとらん</option>
+						</select>
+						<input type="text" name="sender6" class="sender" placeholder="誰から届いた？">
+						<textarea placeholder="メッセージ内容ここ。「なにで届いた？」を「メッセージ」にすると入力可能。長いと自動で省略されて「タップしてさらに表示」とか出てくる。" class="messagearea" name="message6" disabled></textarea>
 					</div>
-					<h4>通知１</h4>
-					<select name="time1" onchange="changeTime(this)">
-						<option value="0" hidden>いつ届いた？</option>
-						<optgroup label="今">
-							<option value="今">今</option>
-						</optgroup>
-						<optgroup label="数分前">
-							<option value="1分前">1分前</option>
-							<option value="2分前">2分前</option>
-							<option value="3分前">3分前</option>
-							<option value="4分前">4分前</option>
-							<option value="5分前">5分前</option>
-							<option value="8分前">8分前</option>
-						</optgroup>
-						<optgroup label="十数分前">
-							<option value="10分前">10分前</option>
-							<option value="12分前">12分前</option>
-							<option value="13分前">13分前</option>
-							<option value="15分前">15分前</option>
-							<option value="16分前">16分前</option>
-							<option value="19分前">19分前</option>
-						</optgroup>
-						<optgroup label="数十分前">
-							<option value="20分前">20分前</option>
-							<option value="27分前">27分前</option>
-							<option value="30分前">30分前</option>
-							<option value="31分前">31分前</option>
-							<option value="40分前">40分前</option>
-							<option value="48分前">48分前</option>
-							<option value="54分前">54分前</option>
-						</optgroup>
-						<optgroup label="数時間前">
-							<option value="1時間前">1時間前</option>
-							<option value="2時間前">2時間前</option>
-							<option value="3時間前">3時間前</option>
-							<option value="5時間前">5時間前</option>
-							<option value="6時間前">6時間前</option>
-							<option value="8時間前">8時間前</option>
-							<option value="11時間前">11時間前</option>
-							<option value="14時間前">14時間前</option>
-							<option value="18時間前">18時間前</option>
-							<option value="23時間前">23時間前</option>
-						</optgroup>
-						<optgroup label="数日前">
-							<option value="1日前">1日前</option>
-							<option value="2日前">2日前</option>
-							<option value="3日前">3日前</option>
-							<option value="4日前">4日前</option>
-							<option value="5日前">5日前</option>
-							<option value="6日前">6日前</option>
-						</optgroup>
-						<optgroup label="もっと前">
-							<option value="1週間前">1週間前</option>
-							<option value="3週間前">3週間前</option>
-						</optgroup>
-					</select>
-					<select name="type1" onchange="changeItem(this)">
-						<option value="0" hidden>なにで届いた？</option>
-						<option value="1">メッセージ</option>
-						<option value="2">不在着信</option>
-						<option value="0">なんも届いとらん</option>
-					</select>
-					<input type="text" name="sender1" class="sender" placeholder="誰から届いた？">
-					<textarea placeholder="メッセージ内容ここ。「なにで届いた？」を「メッセージ」にすると入力可能。
-長いと自動で省略されて「タップしてさらに表示」とか出てくる。" class="messagearea" name="message1" disabled></textarea>
-					<h4>通知２</h4>
-					<select name="time2" onchange="changeTime(this)">
-						<option value="0" hidden>いつ届いた？</option>
-						<optgroup label="今">
-							<option value="今">今</option>
-						</optgroup>
-						<optgroup label="数分前">
-							<option value="1分前">1分前</option>
-							<option value="2分前">2分前</option>
-							<option value="3分前">3分前</option>
-							<option value="4分前">4分前</option>
-							<option value="5分前">5分前</option>
-							<option value="8分前">8分前</option>
-						</optgroup>
-						<optgroup label="十数分前">
-							<option value="10分前">10分前</option>
-							<option value="12分前">12分前</option>
-							<option value="13分前">13分前</option>
-							<option value="15分前">15分前</option>
-							<option value="16分前">16分前</option>
-							<option value="19分前">19分前</option>
-						</optgroup>
-						<optgroup label="数十分前">
-							<option value="20分前">20分前</option>
-							<option value="27分前">27分前</option>
-							<option value="30分前">30分前</option>
-							<option value="31分前">31分前</option>
-							<option value="40分前">40分前</option>
-							<option value="48分前">48分前</option>
-							<option value="54分前">54分前</option>
-						</optgroup>
-						<optgroup label="数時間前">
-							<option value="1時間前">1時間前</option>
-							<option value="2時間前">2時間前</option>
-							<option value="3時間前">3時間前</option>
-							<option value="5時間前">5時間前</option>
-							<option value="6時間前">6時間前</option>
-							<option value="8時間前">8時間前</option>
-							<option value="11時間前">11時間前</option>
-							<option value="14時間前">14時間前</option>
-							<option value="18時間前">18時間前</option>
-							<option value="23時間前">23時間前</option>
-						</optgroup>
-						<optgroup label="数日前">
-							<option value="1日前">1日前</option>
-							<option value="2日前">2日前</option>
-							<option value="3日前">3日前</option>
-							<option value="4日前">4日前</option>
-							<option value="5日前">5日前</option>
-							<option value="6日前">6日前</option>
-						</optgroup>
-						<optgroup label="もっと前">
-							<option value="1週間前">1週間前</option>
-							<option value="3週間前">3週間前</option>
-						</optgroup>
-					</select>
-					<select name="type2" onchange="changeItem(this)">
-						<option value="0" hidden>なにで届いた？</option>
-						<option value="1">メッセージ</option>
-						<option value="2">不在着信</option>
-						<option value="0">なんも届いとらん</option>
-					</select>
-					<input type="text" name="sender2" class="sender" placeholder="誰から届いた？">
-					<textarea placeholder="メッセージ内容ここ。「なにで届いた？」を「メッセージ」にすると入力可能。
-長いと自動で省略されて「タップしてさらに表示」とか出てくる。" class="messagearea" name="message2" disabled></textarea>
-					<h4>通知３</h4>
-					<select name="time3" onchange="changeTime(this)">
-						<option value="0" hidden>いつ届いた？</option>
-						<optgroup label="今">
-							<option value="今">今</option>
-						</optgroup>
-						<optgroup label="数分前">
-							<option value="1分前">1分前</option>
-							<option value="2分前">2分前</option>
-							<option value="3分前">3分前</option>
-							<option value="4分前">4分前</option>
-							<option value="5分前">5分前</option>
-							<option value="8分前">8分前</option>
-						</optgroup>
-						<optgroup label="十数分前">
-							<option value="10分前">10分前</option>
-							<option value="12分前">12分前</option>
-							<option value="13分前">13分前</option>
-							<option value="15分前">15分前</option>
-							<option value="16分前">16分前</option>
-							<option value="19分前">19分前</option>
-						</optgroup>
-						<optgroup label="数十分前">
-							<option value="20分前">20分前</option>
-							<option value="27分前">27分前</option>
-							<option value="30分前">30分前</option>
-							<option value="31分前">31分前</option>
-							<option value="40分前">40分前</option>
-							<option value="48分前">48分前</option>
-							<option value="54分前">54分前</option>
-						</optgroup>
-						<optgroup label="数時間前">
-							<option value="1時間前">1時間前</option>
-							<option value="2時間前">2時間前</option>
-							<option value="3時間前">3時間前</option>
-							<option value="5時間前">5時間前</option>
-							<option value="6時間前">6時間前</option>
-							<option value="8時間前">8時間前</option>
-							<option value="11時間前">11時間前</option>
-							<option value="14時間前">14時間前</option>
-							<option value="18時間前">18時間前</option>
-							<option value="23時間前">23時間前</option>
-						</optgroup>
-						<optgroup label="数日前">
-							<option value="1日前">1日前</option>
-							<option value="2日前">2日前</option>
-							<option value="3日前">3日前</option>
-							<option value="4日前">4日前</option>
-							<option value="5日前">5日前</option>
-							<option value="6日前">6日前</option>
-						</optgroup>
-						<optgroup label="もっと前">
-							<option value="1週間前">1週間前</option>
-							<option value="3週間前">3週間前</option>
-						</optgroup>
-					</select>
-					<select name="type3" onchange="changeItem(this)">
-						<option value="0" hidden>なにで届いた？</option>
-						<option value="1">メッセージ</option>
-						<option value="2">不在着信</option>
-						<option value="0">なんも届いとらん</option>
-					</select>
-					<input type="text" name="sender3" class="sender" placeholder="誰から届いた？">
-					<textarea placeholder="メッセージ内容ここ。「なにで届いた？」を「メッセージ」にすると入力可能。
-長いと自動で省略されて「タップしてさらに表示」とか出てくる。" class="messagearea" name="message3" disabled></textarea>
-					<h4>通知４</h4>
-					<select name="time4" onchange="changeTime(this)">
-						<option value="0" hidden>いつ届いた？</option>
-						<optgroup label="今">
-							<option value="今">今</option>
-						</optgroup>
-						<optgroup label="数分前">
-							<option value="1分前">1分前</option>
-							<option value="2分前">2分前</option>
-							<option value="3分前">3分前</option>
-							<option value="4分前">4分前</option>
-							<option value="5分前">5分前</option>
-							<option value="8分前">8分前</option>
-						</optgroup>
-						<optgroup label="十数分前">
-							<option value="10分前">10分前</option>
-							<option value="12分前">12分前</option>
-							<option value="13分前">13分前</option>
-							<option value="15分前">15分前</option>
-							<option value="16分前">16分前</option>
-							<option value="19分前">19分前</option>
-						</optgroup>
-						<optgroup label="数十分前">
-							<option value="20分前">20分前</option>
-							<option value="27分前">27分前</option>
-							<option value="30分前">30分前</option>
-							<option value="31分前">31分前</option>
-							<option value="40分前">40分前</option>
-							<option value="48分前">48分前</option>
-							<option value="54分前">54分前</option>
-						</optgroup>
-						<optgroup label="数時間前">
-							<option value="1時間前">1時間前</option>
-							<option value="2時間前">2時間前</option>
-							<option value="3時間前">3時間前</option>
-							<option value="5時間前">5時間前</option>
-							<option value="6時間前">6時間前</option>
-							<option value="8時間前">8時間前</option>
-							<option value="11時間前">11時間前</option>
-							<option value="14時間前">14時間前</option>
-							<option value="18時間前">18時間前</option>
-							<option value="23時間前">23時間前</option>
-						</optgroup>
-						<optgroup label="数日前">
-							<option value="1日前">1日前</option>
-							<option value="2日前">2日前</option>
-							<option value="3日前">3日前</option>
-							<option value="4日前">4日前</option>
-							<option value="5日前">5日前</option>
-							<option value="6日前">6日前</option>
-						</optgroup>
-						<optgroup label="もっと前">
-							<option value="1週間前">1週間前</option>
-							<option value="3週間前">3週間前</option>
-						</optgroup>
-					</select>
-					<select name="type4" onchange="changeItem(this)">
-						<option value="0" hidden>なにで届いた？</option>
-						<option value="1">メッセージ</option>
-						<option value="2">不在着信</option>
-						<option value="0">なんも届いとらん</option>
-					</select>
-					<input type="text" name="sender4" class="sender" placeholder="誰から届いた？">
-					<textarea placeholder="メッセージ内容ここ。「なにで届いた？」を「メッセージ」にすると入力可能。
-長いと自動で省略されて「タップしてさらに表示」とか出てくる。" class="messagearea" name="message4" disabled></textarea>
-					<h4>通知５</h4>
-					<select name="time5" onchange="changeTime(this)">
-						<option value="0" hidden>いつ届いた？</option>
-						<optgroup label="今">
-							<option value="今">今</option>
-						</optgroup>
-						<optgroup label="数分前">
-							<option value="1分前">1分前</option>
-							<option value="2分前">2分前</option>
-							<option value="3分前">3分前</option>
-							<option value="4分前">4分前</option>
-							<option value="5分前">5分前</option>
-							<option value="8分前">8分前</option>
-						</optgroup>
-						<optgroup label="十数分前">
-							<option value="10分前">10分前</option>
-							<option value="12分前">12分前</option>
-							<option value="13分前">13分前</option>
-							<option value="15分前">15分前</option>
-							<option value="16分前">16分前</option>
-							<option value="19分前">19分前</option>
-						</optgroup>
-						<optgroup label="数十分前">
-							<option value="20分前">20分前</option>
-							<option value="27分前">27分前</option>
-							<option value="30分前">30分前</option>
-							<option value="31分前">31分前</option>
-							<option value="40分前">40分前</option>
-							<option value="48分前">48分前</option>
-							<option value="54分前">54分前</option>
-						</optgroup>
-						<optgroup label="数時間前">
-							<option value="1時間前">1時間前</option>
-							<option value="2時間前">2時間前</option>
-							<option value="3時間前">3時間前</option>
-							<option value="5時間前">5時間前</option>
-							<option value="6時間前">6時間前</option>
-							<option value="8時間前">8時間前</option>
-							<option value="11時間前">11時間前</option>
-							<option value="14時間前">14時間前</option>
-							<option value="18時間前">18時間前</option>
-							<option value="23時間前">23時間前</option>
-						</optgroup>
-						<optgroup label="数日前">
-							<option value="1日前">1日前</option>
-							<option value="2日前">2日前</option>
-							<option value="3日前">3日前</option>
-							<option value="4日前">4日前</option>
-							<option value="5日前">5日前</option>
-							<option value="6日前">6日前</option>
-						</optgroup>
-						<optgroup label="もっと前">
-							<option value="1週間前">1週間前</option>
-							<option value="3週間前">3週間前</option>
-						</optgroup>
-					</select>
-					<select name="type5" onchange="changeItem(this)">
-						<option value="0" hidden>なにで届いた？</option>
-						<option value="1">メッセージ</option>
-						<option value="2">不在着信</option>
-						<option value="0">なんも届いとらん</option>
-					</select>
-					<input type="text" name="sender5" class="sender" placeholder="誰から届いた？">
-					<textarea placeholder="メッセージ内容ここ。「なにで届いた？」を「メッセージ」にすると入力可能。
-長いと自動で省略されて「タップしてさらに表示」とか出てくる。" class="messagearea" name="message5" disabled></textarea>
-					<h4>通知６</h4>
-					<select name="time6" onchange="changeTime(this)">
-						<option value="0" hidden>いつ届いた？</option>
-						<optgroup label="今">
-							<option value="今">今</option>
-						</optgroup>
-						<optgroup label="数分前">
-							<option value="1分前">1分前</option>
-							<option value="2分前">2分前</option>
-							<option value="3分前">3分前</option>
-							<option value="4分前">4分前</option>
-							<option value="5分前">5分前</option>
-							<option value="8分前">8分前</option>
-						</optgroup>
-						<optgroup label="十数分前">
-							<option value="10分前">10分前</option>
-							<option value="12分前">12分前</option>
-							<option value="13分前">13分前</option>
-							<option value="15分前">15分前</option>
-							<option value="16分前">16分前</option>
-							<option value="19分前">19分前</option>
-						</optgroup>
-						<optgroup label="数十分前">
-							<option value="20分前">20分前</option>
-							<option value="27分前">27分前</option>
-							<option value="30分前">30分前</option>
-							<option value="31分前">31分前</option>
-							<option value="40分前">40分前</option>
-							<option value="48分前">48分前</option>
-							<option value="54分前">54分前</option>
-						</optgroup>
-						<optgroup label="数時間前">
-							<option value="1時間前">1時間前</option>
-							<option value="2時間前">2時間前</option>
-							<option value="3時間前">3時間前</option>
-							<option value="5時間前">5時間前</option>
-							<option value="6時間前">6時間前</option>
-							<option value="8時間前">8時間前</option>
-							<option value="11時間前">11時間前</option>
-							<option value="14時間前">14時間前</option>
-							<option value="18時間前">18時間前</option>
-							<option value="23時間前">23時間前</option>
-						</optgroup>
-						<optgroup label="数日前">
-							<option value="1日前">1日前</option>
-							<option value="2日前">2日前</option>
-							<option value="3日前">3日前</option>
-							<option value="4日前">4日前</option>
-							<option value="5日前">5日前</option>
-							<option value="6日前">6日前</option>
-						</optgroup>
-						<optgroup label="もっと前">
-							<option value="1週間前">1週間前</option>
-							<option value="3週間前">3週間前</option>
-						</optgroup>
-					</select>
-					<select name="type6" onchange="changeItem(this)">
-						<option value="0" hidden>なにで届いた？</option>
-						<option value="1">メッセージ</option>
-						<option value="2">不在着信</option>
-						<option value="0">なんも届いとらん</option>
-					</select>
-					<input type="text" name="sender6" class="sender" placeholder="誰から届いた？">
-					<textarea placeholder="メッセージ内容ここ。「なにで届いた？」を「メッセージ」にすると入力可能。
-長いと自動で省略されて「タップしてさらに表示」とか出てくる。" class="messagearea" name="message6" disabled></textarea>
-				</div>
-				<div class="newold">
-					<div class="new">
-						↑
+					<div class="newold">
+						<div class="new">
+							↑
+							<br>
+							新
+						</div>
+						古
 						<br>
-						新
+						↓
 					</div>
-					古
-					<br>
-					↓
+					<div id="buttonThere"></div>
+					<div id="result"></div>
+					<div id="createbutton"></div>
 				</div>
-				<div id="buttonThere"></div>
-				<div id="result"></div>
-				<div id="createbutton"></div>
 			</div>
 		</div>
 	</div>
